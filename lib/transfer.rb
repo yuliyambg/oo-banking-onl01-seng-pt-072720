@@ -26,9 +26,11 @@ def execute_transaction
 end
 
 def reverse_transfer
+  if self.status == "complete"
       sender.deposit(amount)
       receiver.deposit(-amount)
      self.status = "reversed"
+   end
 end
 
 end
