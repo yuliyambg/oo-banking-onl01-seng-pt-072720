@@ -26,9 +26,8 @@ def execute_transaction
 end
 
 def reverse_transfer
-  if execute_transaction
-      sender.balance += amount
-      receiver.balance -= amount
+      sender.deposit += amount
+      receiver.deposit -= amount
     end
 end
 
